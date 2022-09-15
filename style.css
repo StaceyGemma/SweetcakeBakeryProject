@@ -1,0 +1,448 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{margin: 0;
+
+	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', sans-serif}
+
+/* Banner */
+
+.item1 { grid-area: logo; width: 60%; height:180px;}
+.item2 { grid-area: header; width: 80%; height:auto; padding-top:0px; padding-bottom:0px;}
+.item3 { grid-area: blank; width: 100%; height:auto;}
+.item4 { grid-area: icons; width: 100%; height:50px; padding-right:10px;}
+
+.Footer {
+	padding: 20px;
+	text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'logo logo logo'
+    'header header header'
+    'blank blank icons';
+   background-image: url("img/Banner.jpg");
+	background-repeat: no-repeat;
+	background-position: right; 
+	background-color: #EFD7ED;
+	gap: 0px;
+	padding: 0px;
+}
+
+.grid-container > div {
+  text-align: left;
+  font-size: 30px;
+}
+
+.logo {
+  width: 200px;
+  padding-left: 20px;
+	}
+
+.HText {
+	color: white;
+	font-size: 40pt;
+	padding-left: 30px;
+	padding-top:0px;
+	
+}
+.PText {
+	color: white;
+	font-size: 18pt;
+	padding-top:0px;
+	padding-left: 30px;
+	}
+
+/* How it works */
+	 
+.icon {
+	width: 40px;
+	}
+
+.icons {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	justify-content: flex-end;
+	}
+.navigation  {
+	display:flex;
+	justify-content: center;
+}
+.navigation>div  {
+	margin: 10px;
+font-weight:bold;}
+
+.navigation a {
+	font-size: 14pt;
+	color: #3B2314;
+	text-decoration: none;
+}
+
+.navigation a:hover {
+	color: #d94d70;
+	text-decoration: none;
+}
+
+h1 {padding-top:40px;
+font-weight:bold;}
+
+h3 {margin:10px;
+	font-size:18pt;
+	font-weight:bold;}
+
+.Page1 {
+	
+	color: #3B2314;
+	text-align: center;
+}
+.Page2 {
+	font-size: 14pt;
+	color: #3B2314;
+	text-align: center;
+}
+.Page3 {
+	font-size: 14pt;
+	color: #3B2314;
+	text-align: center;
+	height:600px;
+}
+
+.Page4 {
+	font-size: 14pt;
+	color: #3B2314;
+}
+
+.Page4 h1 {
+	font-size: 28pt;
+	color: #3B2314;
+	text-align: center;
+}
+
+.prices1 { grid-area: header; }
+.prices2 { grid-area: image; }
+.prices3 { grid-area: prices; }
+.prices4 { grid-area: blank1; }
+.prices5 { grid-area: blank2; }
+.grid-container-prices {
+  display: grid;
+  grid-template-areas:
+    'blank1 header header blank2'
+    'blankl image prices blank2';
+
+  grid-template-columns: 10% 40% 40% 10%;
+}
+
+.grid-container-prices > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+.pricetable{
+width:100%;
+height:100%;
+border: 1px solid #EFD7ED; 
+border-collapse: collapse;
+font-size: 18px;}
+
+.pricetable td {
+
+border: 1px solid #EFD7ED; 
+border-collapse: collapse;
+padding: 10px;}
+
+.pricetable th {
+background-color:#EFD7ED;}
+
+.Page5 {
+	font-size: 14pt;
+	color: #3B2314;
+}
+
+.Page5 h1 {
+	color: #3B2314;
+	text-align: center;
+}
+.howitworks{
+	display:flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width:100%;
+	align:center;
+	padding-left: 10%;
+	padding-right: 10%;
+
+}
+
+.howitworksicons {
+	width: 250px;	
+	font-size: 12pt;
+	margin:40px;
+	align:center;
+
+}
+
+.howitworksicons img {
+	height: 100px;
+}
+
+/*Our products*/
+
+* {box-sizing: border-box}
+
+/* Container needed to position the overlay. Adjust the width as needed */
+.products {
+  position: relative;
+  width: 50%;
+  max-width: 300px;
+  margin:20px;	
+}
+.productsflex  {
+	display:flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width:100%;
+	align:center;
+	padding-left: 15%;
+	padding-right: 15%;
+}
+
+.caketableflex  {
+	display:flex;
+	justify-content: center;
+	width:100%;
+	align:center;
+
+}
+.caketableflex>div  {
+	width:50px;
+}
+
+
+/* Make the image to responsive */
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(255, 255, 255, 0.8); /* Black see-through */
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: #d94d70;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.products:hover .overlay {
+  opacity: 1;
+}
+
+/* About us*/
+
+.grid-container-about{
+	display: grid;
+  grid-template-columns: 20% 30% 30% 20%;
+	background-image: url("img/Aboutus.jpg");
+	background-repeat: no-repeat;
+	background-position: left; 
+	background-size: auto;
+	background-color: #EEE4EA;
+	font-size: 12pt;
+	text-align: left;
+	color: #3B2314;
+	max-width: 100%;
+	height: auto;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #efd7ed;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+  color: white;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: white;
+  color: #EFD7ED;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  text-align: center;
+  padding: 20px;
+  background: white;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #EFD7ED;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #cda2c9;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: white;}
+
+.Page6 {
+	font-size: 14pt;
+	color: #3B2314;
+	text-align: center;
+	}
+.Page6 h1 {
+	color: #FFFFFF;
+	text-align: center;
+}
+.Page6 p1 {
+	font-size: 14pt;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+.Page6 input {
+	font-size: 14pt;
+	width:400px;
+	color: #FFFFFF;
+	
+}
+
+.submitbut {
+	font-size: 14pt;
+	width:400px;
+	color: #FFFFFF;
+	 background-color: #EFD7ED;
+	border: 2px solid;
+	height:50px;
+	
+}
+.Page6 textarea {
+	font-size: 14pt;
+	width:400px;
+	color: #FFFFFF;
+	
+}
+.contact1 { grid-area: header; }
+.contact2 { grid-area: name; }
+.contact3 { grid-area: address; }
+.contact4 { grid-area: email; }
+.contact5 { grid-area: message; }
+.contact6 { grid-area: submit; }
+.contact7 { grid-area: blank1; }
+.contact8 { grid-area: blank2; }
+
+.grid-container-contact {
+  display: grid;
+  grid-template-areas:
+    'blank1 header header blank2'
+    'blank1 name address blank2'
+    'blank1 email address blank2'
+    'blank1 message address blank2'
+    'blank1 submit submit blank2';
+}
+
+.grid-container-contact > div {
+  background-color: #EFD7ED;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Page2 */
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
